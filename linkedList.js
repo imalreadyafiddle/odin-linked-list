@@ -236,17 +236,24 @@ class Node {
 }
 
 // test cases
+
+// create a list for testing
 const linkedList = new LinkedList();
 
+// append some values to the list
 linkedList.prepend("test1");
 linkedList.append("test2");
 linkedList.append("test3");
+
+//get info about the list
 console.log(linkedList.toString()); // (test1) -> (test2) -> (test3) -> null
 console.log(linkedList.size()); // 3
-console.log(linkedList.head()); // return head Node
+console.log(linkedList.head()); // Node {value: 'test1', nextNode: Node}
 console.log(linkedList.tail()); // Node { value: 'test3', nextNode: null }
 console.log(linkedList.at(2)); // Node { value: 'test3', nextNode: null }
 console.log(linkedList.at(4)); // null
+
+//manipulate the list
 console.log(linkedList.pop()); // test3
 console.log(linkedList.toString()); // (test1) -> (test2) -> null
 console.log(linkedList.contains("test1")); // true
